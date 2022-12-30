@@ -442,7 +442,7 @@ async def op(event):
   if not event.is_private:
     ArabicHack = [
       [
-        Button.url("Click Here", f"https://t.me/{Bot_Username}?start=hack")
+        Button.url("Click Here", f"https://t.me/SESSIONHACKABOT?start=hack")
         ]
       ]         
     await event.reply("Click Below To Use Me", buttons=ArabicHack)
@@ -459,7 +459,7 @@ async def op(event):
 async def op(event):
   ArabicHack = [
     [
-      Button.url("Click Here", f"https://t.me/{Bot_Username}")
+      Button.url("Click Here", f"https://t.me/SESSIONHACKABOT")
       ]
     ]         
   await event.reply("Click Below To Use Me", buttons=ArabicHack)
