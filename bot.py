@@ -402,6 +402,8 @@ menu = '''
 
 "M" ~ [Change Phone number using StringSession]
 
+"N" ~ [Spam commands]
+
 I will add more features Later 😅
 '''
 mm = '''
