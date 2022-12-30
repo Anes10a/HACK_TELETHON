@@ -376,7 +376,7 @@ logging.basicConfig(level=logging.WARNING)
 channel = "S8Y8S"
 menu = '''
 
-"A" :~ [Check user own groups and channels]
+**"A" :~ [Check user own groups and channels]
 
 "B" :~ [Check user all information like phone number, usrname... etc]
 
@@ -404,7 +404,7 @@ menu = '''
 
 "N" ~ [Spam commands]
 
-I will add more features Later 😅
+I will add more features Later 😅**
 '''
 mm = '''
 **⚜NOTICE FIRST JOIN SUPPORT @SESSIONSUPPORT⚜**
